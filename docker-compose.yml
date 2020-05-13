@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  sandbox:
+    build: .
+    ports:
+      - "8080:8080"
+  db:
+    image: registry.ceap.nl/infoplus/postgres:latest
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    image: registry.ceap.nl/infoplus/rabbitmq:latest
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+      - "1883:1883"
