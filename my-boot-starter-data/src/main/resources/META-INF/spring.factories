@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.github.davio.start.DataAutoConfiguration
+  com.github.davio.starter.DataAutoConfiguration
