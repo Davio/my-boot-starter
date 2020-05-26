@@ -1,0 +1,41 @@
+echo.url: http://localhost:9090/api
+
+spring:
+  main:
+    banner-mode: 'off'
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+  datasource:
+    url: jdbc:tc:postgresql:12:///test
+    username: test
+    password: test
+
+  liquibase:
+    change-log: classpath:/db/db.changelog-master.xml
+    default-schema: public
+
+  test:
+    database:
+      replace: none
+
+logging:
+  level:
+    root: INFO
+    com.github.davio: DEBUG
+
+server:
+  port: 9090
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: FULL
+

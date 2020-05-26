@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.davio.starter.interfaces.messaging.RabbitAutoConfiguration,\
+  com.github.davio.starter.config.ApplicationAutoConfiguration,\
+  com.github.davio.starter.TransactionAutoConfiguration,\
+  com.github.davio.starter.interfaces.rest.MvcAutoConfiguration,\
+  com.github.davio.starter.interfaces.rest.RestSecurityAutoConfiguration

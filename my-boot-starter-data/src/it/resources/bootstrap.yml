@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: my-boot-starter-data
+  cloud:
+    config:
+      name: my-boot-starter-data
+      enabled: false
+server:
+  servlet:
+    context-path: /api
