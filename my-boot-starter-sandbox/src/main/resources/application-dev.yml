@@ -1,0 +1,40 @@
+spring:
+  main:
+    banner-mode: 'off'
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sandbox?ApplicationName=sandbox
+    username: sandbox
+    password: sandbox
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      auto-commit: false
+      maximum-pool-size: 2
+
+  liquibase:
+    change-log: classpath:/db/db.changelog-master.xml
+    default-schema: public
+    clear-checksums: true
+
+logging:
+  level:
+    root: INFO
+    com.github.davio: DEBUG
+
+server:
+  port: 9191
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: FULL
+

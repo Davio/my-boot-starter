@@ -1,17 +1,17 @@
 version: '3.1'
 
 services:
-  sandbox:
-    build: .
-    ports:
-      - "8080:8080"
   db:
-    image: registry.ceap.nl/infoplus/postgres:latest
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: sandbox
+      POSTGRES_PASSWORD: sandbox
+      POSTGRES_DB: sandbox
     ports:
       - "5432:5432"
 
   rabbitmq:
-    image: registry.ceap.nl/infoplus/rabbitmq:latest
+    image: rabbitmq:3-management-alpine
     ports:
       - "15672:15672"
       - "5672:5672"

@@ -2,7 +2,7 @@
 This project demonstrates how to setup your own Spring Boot Starter and how to use it in your services or modules.
 
 ## Requirements
-- Java 14, you can use any JDK such as AdoptOpenJDK.
+- Java 11, you can use any JDK such as AdoptOpenJDK.
 - Docker or Podman with either docker-compose or podman-compose
 
 ## Build

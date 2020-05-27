@@ -17,6 +17,7 @@
         <module>my-boot-starter</module>
         <module>my-boot-starter-data-test</module>
         <module>my-boot-starter-data</module>
+        <module>my-boot-starter-sandbox</module>
     </modules>
 
     <properties>

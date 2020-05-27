@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProfile name="!(dev | test)">
+        <include resource="com/github/davio/logging/logback.xml"/>
+    </springProfile>
+
+    <springProfile name="dev | test">
+        <include resource="org/springframework/boot/logging/logback/base.xml"/>
+        <logger name="org.springframework" level="INFO"/>
+    </springProfile>
+</configuration>
